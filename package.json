@@ -1,0 +1,31 @@
+{
+  "name": "request",
+  "version": "1.0.0",
+  "description": "Request app",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "open": "nodemon app.js"
+  },
+  "author": "Abhishek Singh",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "dexie": "^2.0.4",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "js-beautify": "^1.10.2",
+    "json-format": "^1.0.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "node-datetime": "^2.1.2",
+    "nodemon": "^1.19.2",
+    "pug": "^2.0.4",
+    "set-cookie-parser": "^2.4.0",
+    "uuid": "^3.3.3",
+    "xml-formatter": "^1.1.0"
+  },
+  "devDependencies": {
+    "electron": "^6.0.7"
+  }
+}

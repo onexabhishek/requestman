@@ -1,0 +1,143 @@
+extends layout
+
+block content
+		.row.mb-0
+			.col.s3.l3.pd-0
+				.side-nav.orange.darken-4
+					.side-row-first
+						p History
+					.side-row-second
+						.adp-list-group
+			.col.s9.l9.pd-0
+				.main-box
+					.input-box.grey.lighten-4
+						form#catchRequest
+							.row
+								.col.s2.m2.l2
+									.input-field.col.s12.m-0
+										select(name="method")
+											option(value="GET") GET
+											option(value="POST") POST
+											option(value="PUT") PUT
+											option(value="DELETE") DELETE
+											option(value="PATCH") PATCH
+											option(value="LINK") LINK
+											option(value="UNLINK") UNLINK
+											option(value="COPY") COPY
+											option(value="HEAD") HEAD
+											option(value="OPTIONS") OPTIONS
+											option(value="HEAD") HEAD
+								.input-field.col.s7.m7.l7.m-0
+									input.m-0#fetchUrl(name="url",type="text")
+									label(for="fetchUrl") Enter Url
+								.col.s3.m3.l3
+									button.waves-effect.waves-light.btn(type="submit",name="submit")
+										i.material-icons.right send
+										| Send
+								.col.s12.m12
+									.request-header
+										ul.tabs
+												li.tab.col.s4
+													a(href="#params") Params
+												li.tab.col.s4
+													a(href="#request_headers") 
+														span#numHeaders.badge.adp-badge
+														|Headers
+										.request-wrapper
+											#params
+												table
+													thead
+														tr
+															th(style="width:5%")
+															th Key
+															th Value
+													tbody#requestParams
+														tr
+															td(style="width:5%")
+																label
+															td
+																.input-field.col.s12
+																	input#enterParamKey.paramInput(type="text",data-rel="enterKey",placeholder="Key")
+															td
+																.input-field.col.s12
+																	input#enterParamValue.paramInput(type="text",data-rel="enterValue",placeholder="Value")
+											#request_headers
+												table
+													thead
+														tr
+															th Key
+															th Value
+													tbody
+														tr
+															td
+																.row
+																	.input-field.col.s12
+																		input#autocomplete-input.autocomplete(type="text")
+																		label(for="autocomplete-input") Key
+															td Application/json;utf-8
+					.response-box
+						.full-width
+							.body-header.grey.lighten-4
+								.row.mb-0
+									.col.s6.m6.l6
+										ul.tabs
+											li.tab.col.s4
+												a(href="#body") Body
+											li.tab.col.s4
+												a(href="#header") 
+													span#numHeaders.badge.adp-badge
+													|Header
+											li.tab.col.s4
+												a(href="#cookie")
+													span#numCookies.badge.adp-badge
+													|Cookie
+									.col.s4.m4.l4
+										ul.status_header(style="display:none")
+											li Status&nbsp;
+												span.status
+											li Time Spent&nbsp;
+												span.timespent
+									.col.s2.m2.l2.right
+										a.waves-effect.waves-light.btn-small
+											i.material-icons.right save
+											| Save
+						#body
+							.main-body
+								.response-panel
+									.input-field.col.s3.input-sm
+										select#responseType
+											option(value="auto") Auto
+											option(value="json") JSON
+											option(value="html") HTML
+											option(value="xml") XML
+									div.col.s6.m6.l6
+										a.waves-effect.waves-light.btn-small#tidy Tidy
+										|&nbsp;
+										a.waves-effect.waves-light.btn-small#viewRaw Raw
+										|&nbsp;
+										a.waves-effect.waves-light.btn-small#previewData Preview
+										|&nbsp;
+								#preview-container
+									.editor-container
+										.editor#aceEditor
+									.preview-window
+						#header.col.s12
+							.main-header
+								table
+									thead
+										tr
+											th Key
+											th Value
+									tbody.parse-header
+						#cookie.col.s12
+							.main-header
+								table.responsive-table.center
+									thead
+										tr
+											th Name
+											th Value
+											th Path
+											th Domain
+											th Expires
+											th HttpOnly
+									tbody.parse-cookie

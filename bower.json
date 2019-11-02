@@ -1,0 +1,24 @@
+{
+  "name": "request",
+  "description": "Request app",
+  "main": "app.js",
+  "authors": [
+    "Abhishek Singh"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "^2.24.0",
+    "materialize": "^1.0.0",
+    "jquery": "^3.4.1",
+    "IDB": "idb#^1.0.1"
+  }
+}

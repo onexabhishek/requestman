@@ -1,0 +1,41 @@
+{
+  "name": "IDB",
+  "main": "idb.js",
+  "version": "1.0.1",
+  "homepage": "https://github.com/sonoio/IDB",
+  "description": "Basic IndexedDB javascript library",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "indexeddb",
+    "storage",
+    "offline",
+    "idb",
+    "database"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "mocha": "~1.21.4",
+    "chai": "~1.9.2"
+  },
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.1",
+    "commit": "ffac935c4e0cc5853eaaf9a27090e4340ace5b64"
+  },
+  "_source": "https://github.com/SonoIo/IDB.git",
+  "_target": "^1.0.1",
+  "_originalSource": "idb",
+  "_direct": true
+}
