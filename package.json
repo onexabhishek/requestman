@@ -26,6 +26,6 @@
     "xml-formatter": "^1.1.0"
   },
   "devDependencies": {
-    "electron": "^6.0.7"
+    "electron": "^7.2.4"
   }
 }
